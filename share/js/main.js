@@ -1,8 +1,9 @@
 $(function() {
-	// var postUrl = 'http://120.27.55.114/petUback/api/post/post';
-	// var commentsUrl = 'http://120.27.55.114/petUback/api/post/comments';
-	var commentsUrl = '/share/comments.json';
-	var postUrl = '/share/post.json';
+	var postUrl = 'http://120.27.55.114/PETU/api/v1.0/post/post';
+	var commentsUrl = 'http://120.27.55.114/PETU/api/v1.0/post/comments';
+
+	// var commentsUrl = '/share/comments.json';
+	// var postUrl = '/share/post.json';
 
 
 	var CommentTemplate = $($('#template__comment').html());
