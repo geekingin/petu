@@ -1,13 +1,17 @@
-$(function() {
-	var postUrl = 'http://120.27.55.114/PETU/api/v1.0/post/post';
-	var commentsUrl = 'http://120.27.55.114/PETU/api/v1.0/post/comments';
 
+$(function() {
+	//var postUrl = 'http://120.27.55.114/PETU/api/v1.0/post/post';
+	//var commentsUrl = 'http://120.27.55.114/PETU/api/v1.0/post/comments';
+	
 	// var commentsUrl = '/share/comments.json';
 	// var postUrl = '/share/post.json';
 
+	var postUrl='/PETU/v1.0/api/post/post';
+	var commentsUrl='/PETU/v1.0/api/post/comments';
 
 	var CommentTemplate = $($('#template__comment').html());
 	var postId=getParam('postId',location.search);
+	console.log(postId);
 	$.get(postUrl, {
 		postId: postId,
 		vkey: 'PETU'
@@ -53,10 +57,12 @@ function transTime(unixTimeStamp){
 }
 function getParam(param,str){
 	var params=str.slice(1).split('&');
+	var returnValue='';
 	params.forEach(function(e,i){
 		var pair=e.split('=');
 		if (pair[0]==param){
-			return e[1];
+			returnValue=pair[1];
 		}
-	})
+	});
+	return returnValue;
 }
