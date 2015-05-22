@@ -1,13 +1,13 @@
 
 $(function() {
-	//var postUrl = 'http://120.27.55.114/PETU/api/v1.0/post/post';
-	//var commentsUrl = 'http://120.27.55.114/PETU/api/v1.0/post/comments';
+	var postUrl = 'http://keemo360.com/PETU/v1.0/api/post/post';
+	var commentsUrl = 'http://keemo360.com/PETU/v1.0/api/post/comments';
 	
-	// var commentsUrl = '/share/comments.json';
-	// var postUrl = '/share/post.json';
+	// var commentsUrl = './comments.json';
+	// var postUrl = './post.json';
 
-	var postUrl='/PETU/v1.0/api/post/post';
-	var commentsUrl='/PETU/v1.0/api/post/comments';
+	// var postUrl='/PETU/v1.0/api/post/post';
+	// var commentsUrl='/PETU/v1.0/api/post/comments';
 
 	var CommentTemplate = $($('#template__comment').html());
 	var postId=getParam('postId',location.search);
@@ -23,7 +23,8 @@ $(function() {
 		$('.post__time').text(transTime(data.body.time));
 
 		$('.post__content').text(data.body.content);
-		data.body.imgs.forEach(function(src, i) {
+		$('.post').show();
+		data.body.small_imgs.forEach(function(src, i) {
 			var img = $('<img/>');
 			img.attr('src', src);
 			img.appendTo('.images');
