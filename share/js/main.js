@@ -1,13 +1,13 @@
 
 $(function() {
-	var postUrl = 'http://keemo360.com/PETU/v1.0/api/post/post';
-	var commentsUrl = 'http://keemo360.com/PETU/v1.0/api/post/comments';
+	// var postUrl = 'http://keemo360.com/PETU/v1.0/api/post/post';
+	// var commentsUrl = 'http://keemo360.com/PETU/v1.0/api/post/comments';
 	
 	// var commentsUrl = './comments.json';
 	// var postUrl = './post.json';
 
-	// var postUrl='/PETU/v1.0/api/post/post';
-	// var commentsUrl='/PETU/v1.0/api/post/comments';
+	var postUrl='/PETU/v1.0/api/post/post';
+	var commentsUrl='/PETU/v1.0/api/post/comments';
 
 	var CommentTemplate = $($('#template__comment').html());
 	var postId=getParam('postId',location.search);
