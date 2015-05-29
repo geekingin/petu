@@ -54,7 +54,7 @@ $(function() {
 
 function transTime(unixTimeStamp){
 	var time=new Date(unixTimeStamp*1000);
-	return time.getFullYear()+'-'+time.getMonth()+'-'+(time.getDate()+1)+'  '+time.getHours()+':'+time.getMinutes();
+	return time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate()+'  '+time.getHours()+':'+time.getMinutes();
 }
 function getParam(param,str){
 	var params=str.slice(1).split('&');
